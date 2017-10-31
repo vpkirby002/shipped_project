@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bname:</strong>
+  <%= @boat.bname %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @boat.capacity %>
+</p>
+
+<p>
+  <strong>Current location:</strong>
+  <%= @boat.current_location %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @boat.user %>
+</p>
+
+<%= link_to 'Edit', edit_boat_path(@boat) %> |
+<%= link_to 'Back', boats_path %>

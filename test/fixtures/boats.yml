@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bname: MyString
+  capacity: 1
+  current_location: MyString
+  user: one
+
+two:
+  bname: MyString
+  capacity: 1
+  current_location: MyString
+  user: two
