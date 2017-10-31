@@ -1,5 +1,6 @@
 class BoatJobsController < ApplicationController
   before_action :set_boat_job, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /boat_jobs
   # GET /boat_jobs.json
