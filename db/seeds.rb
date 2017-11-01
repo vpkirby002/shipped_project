@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create([
-	{id: 1, fname: 'Valerie', lname: 'Kirby', email: 'vpkirby002@gmail.com', password: '123456', photo: open('http://cdn.history.com/sites/2/2015/03/hungry-history-the-halloween-pumpkin-an-american-history-E.jpeg')}
+	{id: 1, fname: 'Valerie', lname: 'Kirby', companyname: 'Valerie Inc.', email: 'vpkirby002@gmail.com', password: '123456', photo: open('http://cdn.history.com/sites/2/2015/03/hungry-history-the-halloween-pumpkin-an-american-history-E.jpeg')}
 ])
 Boat.create([
 	{id: 1, bname: 'Titanic', capacity: '100', current_location: ' ort of Long Beach', user_id: '1'}

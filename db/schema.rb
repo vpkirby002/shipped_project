@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20171031181948) do
   create_table "users", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
+    t.string "companyname"
     t.string "photo_file_name"
     t.string "photo_content_type"
     t.integer "photo_file_size"
