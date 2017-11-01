@@ -10,10 +10,6 @@
   <%= @job.origin %>
 </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @job.location %>
-</p>
 
 <p>
   <strong>Destination:</strong>
@@ -21,8 +17,16 @@
 </p>
 
 <p>
-  <strong>Container:</strong>
-  <%= @job.container %>
+  <strong>Container(s):</strong>
+  <%= @job.containers %>
+</p>
+
+<p>
+<% @job.boats.each do |boat| %>
+  <strong>Boat:</strong>
+  <%= boat.bname %>
+    <li><%= boat.bname %></li>
+<% end %>
 </p>
 
 <p>

@@ -12,23 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :bname %>
+    <%= form.label 'Boat Name' %>
     <%= form.text_field :bname, id: :boat_bname %>
   </div>
 
   <div class="field">
-    <%= form.label :capacity %>
+    <%= form.label 'Capacity (of containers)' %>
     <%= form.number_field :capacity, id: :boat_capacity %>
   </div>
 
   <div class="field">
     <%= form.label :current_location %>
     <%= form.text_field :current_location, id: :boat_current_location %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :boat_user_id %>
   </div>
 
   <div class="actions">

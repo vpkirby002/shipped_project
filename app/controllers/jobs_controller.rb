@@ -5,7 +5,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = current_user.boats.reduce([]){|arr,boat| arr + boat.jobs }
   end
 
   # GET /jobs/1
@@ -25,10 +25,12 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
-
+    Job.transaction do
+      @job = Job.create(job_params)
+      BoatJob.create!( job_id: @job.id, boat_id: params[:job][:boat_id])
+    end
     respond_to do |format|
-      if @job.save
+      if @job.id
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
         format.json { render :show, status: :created, location: @job }
       else
@@ -70,6 +72,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:description, :origin, :location, :destination, :container, :cost)
+      params.require(:job).permit(:description, :origin, :location, :destination, :containers, :cost)
     end
 end

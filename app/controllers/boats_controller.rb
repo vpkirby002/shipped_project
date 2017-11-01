@@ -5,7 +5,7 @@ class BoatsController < ApplicationController
   # GET /boats
   # GET /boats.json
   def index
-    @boats = Boat.all
+    @boats = current_user.boats
   end
 
   # GET /boats/1
@@ -26,6 +26,7 @@ class BoatsController < ApplicationController
   # POST /boats.json
   def create
     @boat = Boat.new(boat_params)
+    @boat.user_id = current_user.id
 
     respond_to do |format|
       if @boat.save
