@@ -7,9 +7,8 @@
     <tr>
       <th>Description</th>
       <th>Origin</th>
-      <th>Location</th>
       <th>Destination</th>
-      <th>Container</th>
+      <th>Container(s)</th>
       <th>Cost</th>
       <th colspan="3"></th>
     </tr>
@@ -20,9 +19,8 @@
       <tr>
         <td><%= job.description %></td>
         <td><%= job.origin %></td>
-        <td><%= job.location %></td>
         <td><%= job.destination %></td>
-        <td><%= job.container %></td>
+        <td><%= job.containers %></td>
         <td><%= job.cost %></td>
         <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>

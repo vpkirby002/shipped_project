@@ -22,18 +22,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :job_location %>
-  </div>
-
-  <div class="field">
     <%= form.label :destination %>
     <%= form.text_field :destination, id: :job_destination %>
   </div>
 
   <div class="field">
-    <%= form.label :container %>
-    <%= form.number_field :container, id: :job_container %>
+    <%= form.label 'Container(s)' %>
+    <%= form.number_field :containers, id: :job_container %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boat_id %>
+    <%= form.select( :boat_id, options_for_select(current_user.boats.pluck(:bname,:id)) ) %>
   </div>
 
   <div class="field">

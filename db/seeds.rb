@@ -9,7 +9,7 @@ User.create([
 	{id: 1, fname: 'Valerie', lname: 'Kirby', companyname: 'Valerie Inc.', email: 'vpkirby002@gmail.com', password: '123456', photo: open('http://cdn.history.com/sites/2/2015/03/hungry-history-the-halloween-pumpkin-an-american-history-E.jpeg')}
 ])
 Boat.create([
-	{id: 1, bname: 'Titanic', capacity: '100', current_location: ' ort of Long Beach', user_id: '1'}
+	{id: 1, bname: 'Titanic', capacity: '100', current_location: 'Port of Long Beach', user_id: '1'}
 ])
 Job.create([
 	{id: 1, description: '100 Cars', origin: 'Port of Los Angeles', destination: 'Port of Seattle-Tacoma', containers: '50', cost: '100,000'}

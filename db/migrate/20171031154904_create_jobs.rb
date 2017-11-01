@@ -11,3 +11,5 @@ class CreateJobs < ActiveRecord::Migration[5.1]
     end
   end
 end
+
+#ADD REGION (ragion where boat operates)
