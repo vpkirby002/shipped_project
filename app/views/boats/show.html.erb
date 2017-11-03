@@ -3,22 +3,28 @@
 <p>
   <strong>Boat Name:</strong>
   <%= @boat.bname %>
+  <%= image_tag @boat.photo.url(:medium) %>
 </p>
 
 <p>
-  <strong>Capacity:</strong>
+  <strong>Capacity (in containers):</strong>
   <%= @boat.capacity %>
 </p>
 
 <p>
-  <strong>Current location:</strong>
-  <%= @boat.current_location %>
+	<strong>Region: </strong>
+	<%= @boat.region.name %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @boat.user.fname %>
-</p>
+<% if @boat.jobs.any? %>
+	<p>
+		<strong>Jobs:</strong>
+		<%= render partial: 'jobs/jobs' %>
+	</p>
+<% else %>
+	<p>This Boat currently has no jobs</p>
+	<%= link_to 'Click Here to Add a New Job', new_job_path %>
+ <% end %>
 
 <%= link_to 'Edit', edit_boat_path(@boat) %> |
 <%= link_to 'Back', boats_path %>

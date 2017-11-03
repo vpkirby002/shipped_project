@@ -22,8 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :current_location %>
-    <%= form.text_field :current_location, id: :boat_current_location %>
+    <%= form.label :region %>
+    <%= form.select :region_id, options_for_select(Region.pluck(:name,:id) ), id: :boat_region %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Boat Image' %>
+    <%= form.file_field :photo, id: :boat_photo %>
   </div>
 
   <div class="actions">

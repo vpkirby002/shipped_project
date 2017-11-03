@@ -7,8 +7,9 @@
     <tr>
       <th>Boat</th>
       <th>Capacity (containers)</th>
-      <th>Current location</th>
-      <th>User</th>
+      <th>Company Name</th>
+      <th>Region</th>
+      <th>Boat Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +19,9 @@
       <tr>
         <td><%= boat.bname %></td>
         <td><%= boat.capacity %></td>
-        <td><%= boat.current_location %></td>
         <td><%= boat.user.companyname %></td>
+        <td><%= boat.region.name %></td>
+        <td><%= image_tag boat.photo.url %></td>
         <td><%= link_to 'Show', boat %></td>
         <td><%= link_to 'Edit', edit_boat_path(boat) %></td>
         <td><%= link_to 'Destroy', boat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
