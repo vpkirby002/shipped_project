@@ -1,0 +1,7 @@
+<!-- Partial to show jobs pertaining to that boat -->
+
+<% @boat.jobs.each do |job| %>
+	<li>Job Description: <%= job.description %></li>
+	<li>Job Cost: $<%= job.cost %>.00</li>
+	<li>Required Job Containers: <%= job.containers %></li>
+<% end %>

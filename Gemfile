@@ -57,4 +57,6 @@ gem "paperclip", "~> 5.0.0"
 
 gem 'devise', '~> 4.3'
 
+gem 'axios_rails'
+
 
