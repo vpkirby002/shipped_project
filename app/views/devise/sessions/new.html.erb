@@ -1,14 +1,17 @@
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
- <body>
+ <body id="login_page">
     
 
     <!-- <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->
 
+
+    <!-- Below is the code for the animated ship  -->
+
     <svg version="1.1" class="ship" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   viewBox="10 10 700 700" style="enable-background:new 10 10 700 700;" xml:space="default">
+   viewBox="100 150 600 400" style="enable-background:new 100 150 600 400;" xml:space="default">
 
 
 
@@ -135,7 +138,7 @@
   <path class="ship1" d="M245.7,249.6h-11.4c-0.4,0-0.7-0.3-0.7-0.7l0,0c0-0.4,0.3-0.7,0.7-0.7h11.4c0.4,0,0.7,0.3,0.7,0.7l0,0
     C246.5,249.2,246.1,249.6,245.7,249.6z"/>
 </g>
-<rect id="sea" x="0" y="370" class="ship2" width="800" height="500"/>
+<rect id="sea" x="0" y="370" class="ship2" width="800" height="3000"/>
 <path id="wave6" d="M324.3,382.1c0,0-23.2,2.1-56.7-3"/>
 <path id="wave5" d="M378.1,378.6c0,0-13.8,3.4-34.5,3.5"/>
 <path id="wave4" d="M127,375.2c0,0-21.7,5.4-54.4,5.5"/>
@@ -153,27 +156,42 @@
   </g>
 
 
-
+<!-- End of the ship code -->
 
   <div id="Login_form">
-  
+
+
+ 
+
+
+<div class="login-page">
+
+  <h2>Shipped.com</h2><br>
+  <h3>Consider it done.</h3>
+  <br>
+
+
+
+
+
+
+  <div class="form">
+    <form action="<%= new_user_session_path %>" method="POST" class="register-form"> 
+
+
   <%= link_to "Login", new_user_session_path %>
-  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>  
 
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <h2>Log in</h2>
-
-
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    
-    <div class="field">
+      <div class="field">
     
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   
      </div>
 
-  <div class="field">
+      <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -183,26 +201,58 @@
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
-  
     </div>
-  
-
   <% end -%>
 
+     
     <div class="actions">
-    <%= f.submit "Log in" %>
+      <%= f.submit "Log in" %>
     </div>
+    
+   <!--  </form>
+  <!<button><form class="login-form"></button>  -->
+   <!--    <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/> -->
+      
+    <!-- div class="actions">
+ # <%= f.submit  %></div> --> 
+   
+
+
+<%= render "devise/shared/links" %>
 
 
 <% end %>
+ </div>
+    <!-- login -->
+      <!-- <p class="message">Not registered? <a href="#">Create an account</a></p> -->
+    <!-- </form> -->
+  </div>
+</div>
 
-<%= render "devise/shared/links" %>
-    </div>
 
 
 </svg>
 
+
+<script src="login_page.js"></script>
+
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
