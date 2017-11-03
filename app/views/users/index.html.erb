@@ -1,7 +1,16 @@
 <% if current_user %>
   <p id="notice"><%= notice %></p>
 
-  <h1>Users</h1>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- <div id="users_table">
+
+  
+</div> -->
+
+
+<h1>Users</h1>
+
 
   <table>
     <thead>
@@ -24,7 +33,7 @@
           <td><%= image_tag @user.photo.url(:medium) %></td>
           <td><%= link_to 'Show', @user %></td>
           <td><%= link_to 'Edit', edit_user_path(@user) %></td>
-          <td><%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     </tbody>
   </table>
@@ -32,5 +41,6 @@
   <br>
 
 <%= link_to 'Company Boats', boats_path(@user) %>
+<%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
 
 <% end %>

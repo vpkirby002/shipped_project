@@ -1,22 +1,73 @@
-body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  // height: 80vh; 
+// body #login_page {
+//   background-color: #fff;
+//   color: #333;
+//   margin: 33px;
+//   font-family: 'Roboto', sans-serif;
+//   font-size: 20px;
+//   line-height: 18px;
+//   height: 100vh; 
+
+// }
+
+
+// body {
+  // background: ; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  // background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  // background: -o-linear-gradient(right, #76b852, #8DC26F);
+  // background: linear-gradient(to left, #76b852, #8DC26F);
+  // font-family: "Roboto", sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;      
+
+
+body#users_page h1 {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
 
 }
 
+
+
+
+
+
+body #sign_in_page {
+  background: #ffe2f2;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
    body #Login_form {
-  
+
   position: relative;
-  text-align: center;
+  text-align: right;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  height: 80vh; 
+  height: 100vh; 
+  margin-bottom: 0;
+
    }
+
+.login-page h2 {
+  position: absolute;
+  font-size: 50px;
+  margin-top: -106px;
+  padding-left: 500px;
+
+}
+
+.login-page h3 {
+  font-size: 20px;
+   margin-top: -100px;
+   padding-top:5px;
+  padding-left: 300px;
+  display: inline-block;
+  margin-left: 275px;
+  overflow: hidden;
+}
 
 
 p, ol, ul, td {
@@ -31,18 +82,29 @@ pre {
   font-size: 11px;
 }
 
+// Below are the links for the CSS for links to Users table page //
+
+
 a {
   color: #000;
+  // padding: 100px;
+  font-size: 20px;
+  
 
   &:visited {
-    color: #666;
+    color: #000;
+   
   }
+
+  //End of the CSS for links page //
 
   &:hover {
     color: #fff;
     background-color: #000;
   }
 }
+
+
 
 th {
   padding-bottom: 5px;
@@ -81,17 +143,25 @@ div
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
+// Users Page CSS below/
+ 
 
+//  #notice #users_table h1 {
+
+//   font-size: 30px;
+//   font-family: "Roboto", sans-serif;
+
+// }
 
 
 
   h2 {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
+    // padding: 5px 5px 5px 15px;
+    font-size: 20px;
     margin: -7px -7px 0;
-    background-color: #c00;
+    // background-color: #c00;
     color: #fff;
   }
 
@@ -389,8 +459,402 @@ transform:translate(-3px,0);
 //Below is  the CSS for the login form/box//
 
 
+// @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin-right: 100;
+}
+.form {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  z-index: 1;
+  margin-left: 900px;
+  margin-right: 500px;
+  padding: 20px 20px 20px 20px;
+  width: 220px;
+  height: 450px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 20px;
+
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  // display: none;
+  float: right;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+
+// This is the end of the login page CSS
+
+//Below is the CSS for the sign in page form
+
+
+
+// body #sign_in_page {
+
+//   background-color: purple;
+
+// }
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.sign_in_page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form2 {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 500px;
+  height: 900px;
+  line-height: 0.8;
+  margin-top: 0;
+  margin-left: -140px;
+  // max-width: 360px;
+  // margin: 0 auto 100px;
+  font-size: 15px;
+  padding-top: -50px;
+  padding: 60px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form2 input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+.form2 button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form2 button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form2 .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form2 .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form2 .register-form {
+  display: none;
+}
+
+.actions2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 200px;
+  line-height: 0;
+
+}
+
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body#sign_in_page2 {
+  background-color: #F6BBB8; /* fallback for old browsers */
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  // background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  // background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  // background: -o-linear-gradient(right, #76b852, #8DC26F);
+  // background: linear-gradient(to left, #76b852, #8DC26F);
+  // font-family: "Roboto", sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;      
+}
+
+/////End of the sign page CSS//
+
+
+//Below is the CSS for the Users table page//
+
+// body#users_page {
+//   background-color: #F6BBB8;
+//   font-family: "Roboto", sans-serif;
+//   font-size: 20px;
+// }
+
+//Below is the table CSS//
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body#users_page {
+  background-color: #F6BBB8;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  // text-align: center;
+}
+
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
 
 
