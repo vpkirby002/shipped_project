@@ -1,9 +1,10 @@
 class CreateJobs < ActiveRecord::Migration[5.1]
   def change
     create_table :jobs do |t|
-      t.string :description
-      t.string :origin
-      t.string :destination
+      t.string :jname
+      t.string :description 
+      t.integer :origin_id
+      t.integer :destination_id
       t.integer :containers
       t.integer :cost
 

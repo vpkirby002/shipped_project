@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031181948) do
+ActiveRecord::Schema.define(version: 20171102185928) do
 
   create_table "boat_jobs", force: :cascade do |t|
     t.integer "job_id"
@@ -24,21 +24,45 @@ ActiveRecord::Schema.define(version: 20171031181948) do
   create_table "boats", force: :cascade do |t|
     t.string "bname"
     t.integer "capacity"
-    t.string "current_location"
+    t.integer "current_location_id"
+    t.integer "region_id"
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.integer "photo_file_size"
+    t.datetime "photo_updated_at"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["current_location_id"], name: "index_boats_on_current_location_id"
+    t.index ["region_id"], name: "index_boats_on_region_id"
     t.index ["user_id"], name: "index_boats_on_user_id"
   end
 
   create_table "jobs", force: :cascade do |t|
+    t.string "jname"
     t.string "description"
-    t.string "origin"
-    t.string "destination"
+    t.integer "origin_id"
+    t.integer "destination_id"
     t.integer "containers"
     t.integer "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "location_name"
+    t.integer "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_locations_on_region_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+    t.integer "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_regions_on_location_id"
   end
 
   create_table "users", force: :cascade do |t|

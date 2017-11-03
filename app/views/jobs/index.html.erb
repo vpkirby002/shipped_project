@@ -10,6 +10,7 @@
       <th>Destination</th>
       <th>Container(s)</th>
       <th>Cost</th>
+      <th>Boat</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
         <td><%= job.destination %></td>
         <td><%= job.containers %></td>
         <td><%= job.cost %></td>
+        <td><%= job.boats.map{|boat| boat.bname}.join(', ') %></td>
         <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,3 +35,4 @@
 <br>
 
 <%= link_to 'New Job', new_job_path %>
+<%= link_to 'Company Page', users_path %>

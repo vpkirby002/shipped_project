@@ -2,8 +2,10 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :boats
-  # has_many :boat_jobs, through: :boats, source: :jobs
-  # has_many :jobs, through: :boat_jobs
+  has_many :boat_jobs, through: :boats, source: :jobs
+  has_many :jobs, through: :boat_jobs
+
+  validates :email, uniqueness: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
