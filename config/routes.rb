@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :regions
   devise_for :users
   resources :boat_jobs
-  resources :jobs
+  resources :jobs 
   resources :boats
   resources :users
 
