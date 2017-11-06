@@ -1,4 +1,6 @@
 <%= form_with(model: boat, local: true) do |form| %>
+  
+
   <% if boat.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(boat.errors.count, "error") %> prohibited this boat from being saved:</h2>
@@ -10,6 +12,9 @@
       </ul>
     </div>
   <% end %>
+
+
+<div class="form3">
 
   <div class="field">
     <%= form.label 'Boat Name' %>
@@ -35,3 +40,7 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>
+
+

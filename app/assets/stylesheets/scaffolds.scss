@@ -858,3 +858,125 @@ td.text-right {
 }
 
 
+// Below is the CSS for the New Boats Page//
+
+
+.form3 {
+  // position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 500px;
+  height: 500px;
+  line-height: 0.95;
+  margin-top: 0;
+  margin-left: 315px;
+  margin-right: 50px;
+  font-size: 25px;
+  padding-top: -50px;
+  padding: 60px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form3 input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+.form3 button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form3 button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form3 .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form3 .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form3 .register-form {
+  display: none;
+}
+
+
+
+
+//Below is the CSS for the New Jobs Page//
+
+.form4 {
+  // position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 500px;
+  height: 560px;
+  line-height: 0.95;
+  margin-top: 0;
+  margin-left: 315px;
+  margin-right: 50px;
+  font-size: 25px;
+  padding-top: -50px;
+  padding: 60px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form4 input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+.form4 button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form4 button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form4 .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form4 .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form4 .register-form {
+  display: none;
+}
+
