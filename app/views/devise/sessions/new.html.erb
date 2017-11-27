@@ -178,11 +178,8 @@
   <div class="form">
     <form action="<%= new_user_session_path %>" method="POST" class="register-form"> 
 
-
-  <%= link_to "Login", new_user_session_path %>
-  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>  
-
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      
 
       <div class="field">
     
