@@ -20,7 +20,7 @@
 
   <div class="field">
     <%= form.label :region %>
-    <%= form.select( :region_id, options_for_select(Region.pluck(:name,:id)), id: :region_selector) %>
+    <%= form.select( :region_id, options_for_select(Region.pluck(:name,:id)), {prompt: 'Select a Region'}, {id: 'region_selector'}  )%>
   </div>
 
   <div class="field">
@@ -30,12 +30,12 @@
 
   <div class="field">
     <%= form.label :origin %>
-    <%= form.select( :location_id, options_for_select(Location.pluck(:location_name,:id)), id: :location_selector) %>
+    <%= form.select( :location_id, options_for_select(Location.pluck(:location_name,:id)), {prompt: 'Select an Origin'}, id: 'location_selector'  )%>
   </div>
 
   <div class="field">
     <%= form.label :destination %>
-    <%= form.select( :location_id, options_for_select(Location.pluck(:location_name,:id)), id: :location_selector ) %>
+    <%= form.select( :location_id, options_for_select(Location.pluck(:location_name,:id)), {prompt: 'Select a Destination'}, id: 'location_selector' ) %>
   </div>
 
   <div class="field">
@@ -56,20 +56,26 @@
 <% end %>
 
 <script type="text/javascript">
-  let location_selects = document.querySelectorAll("#location_selector");
-  axios.get(`regions/${event.target.value}/locations`).then(function(response){
+  document.querySelector("#region_selector").addEventListener("change",function(event){
+    let location_selects = document.querySelectorAll("#location_selector");
+    console.log(event);
+    axios.get(`/regions/${event.target.value}/locations`).then(function(response){
+      console.log(response.data[0])
       //for each location select
       location_selects.forEach( locationSelect => {
         //wipe out existing options from select
-        locationSelect.innerHTML = " ";
+        locationSelect.innerHTML = "";
         // re-add the options to the select
         response.data.forEach( location => {
           locationSelect.innerHTML += `<option value="${location.id}">${location.location_name}</option>`;
         });
       });
     });
+  });
+
 </script>
 
 
 </div>
+
 
